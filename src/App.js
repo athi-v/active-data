@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import {Routes, Route} from 'react-router-dom'
+import Home from './components/Home';
+import Pricing from './routes/Pricing'
+import Faq from './routes/Faq'
+import Contact from './routes/Contact'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!CHANGES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+
+<Routes>
+  <Route path='/' element={<Home />} />
+  <Route path='/pricing' element={<Pricing />} />
+  <Route path='/faq' element={<Faq/>} />
+  <Route path='/contact' element={<Contact/>} />
+
+
+</Routes>
+
+    </>
   );
 }
 
